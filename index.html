@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="search-bar">
-        <input type="text" placeholder="Search for a city..." />
-        <button type="submit">Search</button>
+        <input type="text" placeholder="Search for a city..." id="search" />
+        <button type="submit" id="search-btn">Search</button>
       </div>
       <div class="weather-info">
         <div class="city-other">
           <h1>Paris</h1>
           <p>
-            Thursday 23:36, mist <br />
-            Humidity: 91%, Wind: 3.6km/h
+            <span class="day">Thursday </span> <span class="time">23:36</span>,
+            <span class="description">cloudy</span> <br />
+            Humidity: <span class="humidity">91%</span>, Wind:
+            <span class="wind">3.6km/h</span>
           </p>
         </div>
         <div class="temp">
-          <p><span class="material-outlined-symbols"></span>10 &deg C</p>
+          <img
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+            alt=""
+            id="weather-icon"
+          />
+          <p><span class="temp">10</span>&degC</p>
         </div>
       </div>
       <div class="footer">
@@ -32,5 +40,6 @@
         </p>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
